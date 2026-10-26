@@ -209,9 +209,6 @@ pub fn interpret_page<'a>(
             {
                 continue;
             }
-            {
-                continue;
-            }
             // PdfCraft patch: "Hide all comments" keeps widgets and links.
             if context.settings.hide_comments
                 && !matches!(annot.get::<hayro_syntax::object::Name<'_>>(SUBTYPE).as_deref(), Some(b"Widget" | b"Link"))
