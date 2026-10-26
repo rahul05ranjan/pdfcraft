@@ -2974,11 +2974,7 @@ trailer << /Root 1 0 R >>
     #[test]
     fn annotation_oc_hides_the_annotation() {
         let pdf = |off: bool| {
-            let ocprops = if off {
-                "<< /OCGs [6 0 R] /D << /OFF [6 0 R] >> >>"
-            } else {
-                "<< /OCGs [6 0 R] /D << >> >>"
-            };
+            let ocprops = if off { "<< /OCGs [6 0 R] /D << /OFF [6 0 R] >> >>" } else { "<< /OCGs [6 0 R] /D << >> >>" };
             format!(
                 "%PDF-1.7
 1 0 obj << /Type /Catalog /Pages 2 0 R /OCProperties {ocprops} >> endobj
